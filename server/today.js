@@ -5,22 +5,16 @@ if (Meteor.isServer) {
 
     // Setup template for the day
     var startingDate = new Date();
-    startingDate.setHours(8);
-    startingDate.setMinutes(45);
+    startingDate.setHours(9);
+    startingDate.setMinutes(0);
+
+    var timestamp = startingDate.getTime()
 
     var date = startingDate, interval=15, arr=[];
     for(var i=0;i<37;i++){
-      var humanMinutes;
-      var endTime;
-
-      humanMinutes = date.getMinutes();
-
-
-
-      endTime = date.getMinutes() + 15;
-
-      date.setMinutes(humanMinutes + interval);
-      Bookings.insert({timeBlock: date.getHours() + '.' + humanMinutes});
+      var timeBlockDate = new Date(timestamp)
+      Bookings.insert({timeBlock: moment(timeBlockDate).format('HH:mm')});
+      timestamp += interval*60*1000
     }
 
     // Setup our meeting rooms
