@@ -8,7 +8,7 @@ Zen meeting room booker
 * Install meteor
 
 ```bash
-$ curl https://install.meteor.com | /bin/sh
+curl https://install.meteor.com | /bin/sh
 
 cd today
 
