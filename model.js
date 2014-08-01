@@ -25,6 +25,12 @@ Bookings = new Meteor.Collection("bookings", {
             max: 50,
             optional: true
         },
+        room_id: {
+            type: String,
+            label: "Room ID",
+            max: 50,
+            optional: false
+        },
     }
 });
 

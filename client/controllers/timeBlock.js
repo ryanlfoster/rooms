@@ -7,6 +7,11 @@ if (Meteor.isClient) {
     $('.addOwner').hide();
     $(e.target).children('.addOwner').show();
     $(e.target).children('.addOwner').children().children('input').focus();
+    $(e.target).children('.addOwner').children().children('input').val('');
+  }
+
+  Template.timeBlock.hideControls = function(e){
+    $('.addOwner').hide();
   }
 
   Template.timeBlock.hidePastTimeBlocks = function(e){
@@ -31,11 +36,6 @@ if (Meteor.isClient) {
   Template.timeBlock.rendered = function(){
     jsgradient.gradientList('#E987A4', '#0E163B', '#timeBlockIndex');
 
-    Template.timeBlock.hidePastTimeBlocks();
-
-    setInterval(function(){
-      Template.timeBlock.hidePastTimeBlocks();
-    },1000);
   }
 
   Template.timeBlock.events({
@@ -46,6 +46,13 @@ if (Meteor.isClient) {
 
     'submit form': function (e) {
       $('.addOwner').hide();
+    },
+
+    'keyup input': function(e) {
+      if (e.keyCode == 27) {
+        // Hits esc
+        Template.timeBlock.hideControls();
+      };
     }
   });
 }

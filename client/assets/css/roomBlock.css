@@ -1,0 +1,24 @@
+.roomBlock {
+    list-style-type: none;
+    font-family: 'Source Code Pro',monospace;
+    font-size: 24px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-weight: 100;
+    background-color: #ccc;
+}
+
+.roomBlock a {
+    text-decoration: none;
+    display: block;
+    padding: 30px;
+    color: blue;
+}
+
+a.back {
+    color: #fff;
+    font-family: 'Source Code Pro',monospace;
+    font-size: 18px;
+    display: block;
+    text-decoration: none;
+    padding: 30px;
+}

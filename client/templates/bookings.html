@@ -1,0 +1,11 @@
+<template name="bookings">
+    <a href="/" class="back">&larr; {{room.name}}</a>
+    <ul id="timeBlockIndex">
+      {{#each bookings}}
+        {{>timeBlock}}
+      {{/each}}
+    </ul>
+    <div class="goHome animated">
+        <img src="/gohometime.png" width="250"/>
+    </div>
+</template>
