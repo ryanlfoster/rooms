@@ -9,23 +9,42 @@ if (Meteor.isClient) {
     $(e.target).children('.addOwner').children().children('input').focus();
   }
 
+  Template.timeBlock.hidePastTimeBlocks = function(e){
+    var currentTime = Date.now();
+    console.log('Hiding old time blocks');
+
+    $('li.timeBlock').each( function( index, el ) {
+     if ($(el).data('end-time') < currentTime) {
+        $(el).addClass('animated fadeOutLeftBig');
+        $(el).hide();
+     };
+    });
+
+    if ($('li.timeBlock').length == 0) {
+      $('.goHome').show();
+    } else {
+      $('.goHome').hide();
+    }
+  }
+
   Template.timeBlock.rendered = function(){
-    jsgradient.gradientList('#07E3F2', '#155994', '#timeBlockIndex');
+    jsgradient.gradientList('#E987A4', '#0E163B', '#timeBlockIndex');
+
+    Template.timeBlock.hidePastTimeBlocks();
+
+    setInterval(function(){
+      Template.timeBlock.hidePastTimeBlocks();
+    },1000);
   }
 
   Template.timeBlock.events({
-    'touchend li.timeBlock': function (e) {
-      Template.timeBlock.showControls(e);
-      Session.set("selectedDocId", this._id);
-    },
-
     'click li.timeBlock': function (e) {
       Template.timeBlock.showControls(e);
       Session.set("selectedDocId", this._id);
     },
 
     'submit form': function (e) {
-      $('body').focus();
+      $('.addOwner').hide();
     }
   });
 }

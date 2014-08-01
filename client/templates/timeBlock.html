@@ -1,7 +1,13 @@
 <template name="timeBlock">
-      <li class="timeBlock" data-time="{{timeBlock}}">
-        {{timeBlock}} {{blockNo}}
-        <b>{{owner}}</b>
+      <li class="timeBlock {{#if owner}}booked{{/if}}" data-end-time="{{endTime}}" >
+        {{timeBlock}}
+        <div class="timeBlock_owner">
+          {{#if owner}}
+            {{owner}}
+          {{else}}
+            +
+          {{/if}}
+        </div>
         <div class="addOwner" style="display:none">
           {{#autoForm collection="Bookings" doc=editingDoc id="updateBooking" type="update"}}
             {{> afFieldInput name='owner' class="timeBlock_owner-input" placeholder='Your name'}}

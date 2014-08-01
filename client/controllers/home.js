@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
   Template.home.bookings = function(){
-    return Bookings.find({});
+    return Bookings.find({}, {sort: ['timeBlock']} );
   }
 }

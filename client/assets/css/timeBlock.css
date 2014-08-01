@@ -1,14 +1,39 @@
 .timeBlock {
     list-style-type: none;
-    font-family: Helvetica, sans-serif;
-    font-size: 36px;
+    font-family: 'Source Code Pro',monospace;
+    font-size: 24px;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     color: #fff;
-    padding: 20px;
+    padding: 30px;
+    font-weight: 100;
     background-color: #ccc;
 }
 
 .timeBlock_owner-input {
     font-size:30px;
     border: 0;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    outline: none;
+    font-family: Helvetica, arial;
+    font-weight: 100;
+    width: 100%;
+    border: 1px solid white;
+    background-color: transparent;
+    color: #fff;
+}
+
+.timeBlock_owner-input::-webkit-input-placeholder {
+   color: rgba(255,255,255,0.5);
+}
+
+.timeBlock_owner {
+    float: right;
+    font-family: Helvetica, arial;
+    font-weight: 100;
+}
+
+.timeBlock.booked {
+    opacity: 0.8;
 }

@@ -13,7 +13,11 @@ if (Meteor.isServer) {
     var date = startingDate, interval=15, arr=[];
     for(var i=0;i<37;i++){
       var timeBlockDate = new Date(timestamp)
-      Bookings.insert({timeBlock: moment(timeBlockDate).format('HH:mm')});
+      var timeBlockDateEnd = (timestamp + interval*60*1000)
+
+      var formattedTimeBlock = moment(timeBlockDate).format('HH:mm') + " → " + moment(timeBlockDateEnd).format('HH:mm');
+
+      Bookings.insert({timeBlock: formattedTimeBlock, endTime: timeBlockDateEnd});
       timestamp += interval*60*1000
     }
 

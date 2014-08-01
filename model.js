@@ -15,6 +15,10 @@ Bookings = new Meteor.Collection("bookings", {
             label: "Time block",
             max: 50
         },
+        endTime: {
+          type: String,
+          label: 'End time'
+        },
         owner: {
             type: String,
             label: "Owner name",
