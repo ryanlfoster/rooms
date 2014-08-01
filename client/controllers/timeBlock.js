@@ -15,12 +15,13 @@ if (Meteor.isClient) {
 
     $('li.timeBlock').each( function( index, el ) {
      if ($(el).data('end-time') < currentTime) {
-        $(el).addClass('animated fadeOutLeftBig');
         $(el).hide();
-     };
+     } else {
+        $(el).show();
+     }
     });
 
-    if ($('li.timeBlock').length == 0) {
+    if (currentTime > $('li.timeBlock').last().data('end-time') ) {
       $('.goHome').show();
     } else {
       $('.goHome').hide();
