@@ -1,0 +1,14 @@
+.timeBlock {
+    list-style-type: none;
+    font-family: Helvetica, sans-serif;
+    font-size: 36px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    color: #fff;
+    padding: 20px;
+    background-color: #ccc;
+}
+
+.timeBlock_owner-input {
+    font-size:30px;
+    border: 0;
+}
