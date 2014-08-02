@@ -50,10 +50,10 @@
     text-decoration: line-through;
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:768px) {
     .timeBlock {
         font-size:16px;
-        padding: 20px 15px;
+        padding: 22px 15px;
     }
 
     .timeBlock .timeBlock_owner-input {

@@ -6,9 +6,10 @@ a.backButton {
     display: block;
     text-decoration: none;
     padding: 20px 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:768px) {
     a.backButton {
         padding: 15px;
         font-size:16px;

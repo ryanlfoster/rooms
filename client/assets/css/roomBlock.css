@@ -3,8 +3,8 @@
     font-family: 'Lato', sans-serif;
     font-weight: 100;
     font-size: 24px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    background-color: #474747;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background-color: #000;
 }
 
 .roomBlock a {
@@ -15,7 +15,7 @@
 }
 
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:768px) {
     .roomBlock {
         font-size:22px;
     }

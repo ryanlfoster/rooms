@@ -1,11 +1,12 @@
 <template name="bookings">
-    <a href="/" class="backButton">&larr; {{room.name}}</a>
+    <a href="/" class="backButton">{{room.name}}</a>
     <ul id="timeBlockIndex">
       {{#each bookings}}
         {{>timeBlock}}
       {{/each}}
     </ul>
     <div class="goHome animated">
-        <img src="/gohometime.png" width="250"/>
+        <img src="clock@3x.png" width="60"/>
+        <p>See you tomorrow</p>
     </div>
 </template>
