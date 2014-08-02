@@ -4,8 +4,9 @@ if (Meteor.isClient) {
   }
 
   Template.timeBlock.showControls = function(e){
-    $('.addOwner').slideUp('fast');
-    $(e.target).children('.addOwner').slideDown('fast');
+    $('.addOwner').hide();
+    $(e.target).children('.addOwner').show();
+
     $(e.target).children('.addOwner').children().children('input').focus();
     $(e.target).children('.addOwner').children().children('input').val('');
   }

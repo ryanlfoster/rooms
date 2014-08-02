@@ -13,3 +13,14 @@
     padding: 30px;
     color: #fff;
 }
+
+
+@media only screen and (max-width:800px) {
+    .roomBlock {
+        font-size:22px;
+    }
+
+    .roomBlock a{
+        padding: 30px 15px;
+    }
+}

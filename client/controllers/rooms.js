@@ -3,4 +3,7 @@ if (Meteor.isClient) {
     return Rooms.find({});
   }
 
+  Template.rooms.rendered = function() {
+
+  }
 }

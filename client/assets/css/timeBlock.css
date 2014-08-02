@@ -38,12 +38,26 @@
     display: inline-block;
     font-family: 'Lato', sans-serif;
     font-weight: 100;
+    position: relative;
+    top: -1px;
 }
 
 .timeBlock.booked {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .timeBlock.booked .timeBlock_time {
     text-decoration: line-through;
+}
+
+@media only screen and (max-width:800px) {
+    .timeBlock {
+        font-size:16px;
+        padding: 20px 15px;
+    }
+
+    .timeBlock .timeBlock_owner-input {
+        font-size:18px;
+        padding: 8px;
+    }
 }

@@ -2,6 +2,7 @@
   "packages": {
     "iron-router": {},
     "autoform": {},
-    "easycron": {}
+    "easycron": {},
+    "fastclick": {}
   }
 }
