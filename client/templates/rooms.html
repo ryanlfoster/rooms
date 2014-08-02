@@ -1,11 +1,7 @@
 <template name="rooms">
-    <ul class="">
+    <ul class="roomBlocks">
         {{#each rooms}}
-        <li class="roomBlock">
-            <a href="/{{_id}}">
-                {{name}}
-            </a>
-        </li>
+            {{>roomBlock}}
         {{/each}}
     </ul>
 </template>

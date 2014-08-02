@@ -1,6 +1,7 @@
 {
   "packages": {
     "iron-router": {},
-    "autoform": {}
+    "autoform": {},
+    "easycron": {}
   }
 }

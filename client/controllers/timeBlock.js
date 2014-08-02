@@ -34,8 +34,7 @@ if (Meteor.isClient) {
   }
 
   Template.timeBlock.rendered = function(){
-    jsgradient.gradientList('#E987A4', '#0E163B', '#timeBlockIndex');
-
+    jsgradient.gradientList('#FB2B68', '#FF5B37', '#timeBlockIndex');
   }
 
   Template.timeBlock.events({
@@ -45,6 +44,7 @@ if (Meteor.isClient) {
     },
 
     'submit form': function (e) {
+      // Close form after submissions
       $('.addOwner').hide();
     },
 

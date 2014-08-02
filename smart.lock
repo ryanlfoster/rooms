@@ -3,7 +3,8 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {},
-      "autoform": {}
+      "autoform": {},
+      "easycron": {}
     },
     "packages": {
       "iron-router": {
@@ -15,6 +16,11 @@
         "git": "https://github.com/aldeed/meteor-autoform.git",
         "tag": "v0.16.1",
         "commit": "34a447fd3a1b3164c78f865aabbac3ddc2d033fb"
+      },
+      "easycron": {
+        "git": "https://github.com/chfritz/meteor-easycron.git",
+        "tag": "v0.0.2",
+        "commit": "771b91946943ed6dd5e78eaf892715a540d977f2"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",
@@ -28,8 +34,8 @@
       },
       "collection2": {
         "git": "https://github.com/aldeed/meteor-collection2.git",
-        "tag": "v0.4.3",
-        "commit": "cb470de2cfeebeccbf76d4cc0a39ad4afc76d553"
+        "tag": "v0.4.4",
+        "commit": "c70deb36e10f63238b884529eea1e38cf0789903"
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",

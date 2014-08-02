@@ -3,5 +3,4 @@ if (Meteor.isClient) {
     return Rooms.find({});
   }
 
-
 }
