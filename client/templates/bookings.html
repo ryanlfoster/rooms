@@ -1,6 +1,6 @@
 <template name="bookings">
     <a href="/" class="backButton">{{room.name}}</a>
-    <ul id="timeBlockIndex">
+    <ul class="timeBlocks" id="timeBlockIndex">
       {{#each bookings}}
         {{>timeBlock}}
       {{/each}}

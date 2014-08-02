@@ -10,6 +10,10 @@ if (Meteor.isClient) {
   Template.bookings.rendered = function() {
     Template.timeBlock.hidePastTimeBlocks();
 
+    setTimeout(function(){
+      $('.timeBlocks').velocity("transition.slideUpIn");
+    }, 300);
+
     setInterval(function(){
       Template.timeBlock.hidePastTimeBlocks();
     },1000);
