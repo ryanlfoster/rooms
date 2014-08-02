@@ -4,8 +4,8 @@ if (Meteor.isClient) {
   }
 
   Template.timeBlock.showControls = function(e){
-    $('.addOwner').hide();
-    $(e.target).children('.addOwner').show();
+    $('.addOwner').slideUp('fast');
+    $(e.target).children('.addOwner').slideDown('fast');
     $(e.target).children('.addOwner').children().children('input').focus();
     $(e.target).children('.addOwner').children().children('input').val('');
   }
@@ -34,7 +34,7 @@ if (Meteor.isClient) {
   }
 
   Template.timeBlock.rendered = function(){
-    jsgradient.gradientList('#FB2B68', '#FF5B37', '#timeBlockIndex');
+    jsgradient.gradientList('#1AD6FD', '#1D62F0', '#timeBlockIndex');
   }
 
   Template.timeBlock.events({
