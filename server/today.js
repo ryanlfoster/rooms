@@ -21,8 +21,8 @@ if (Meteor.isServer) {
 
           var timestamp = startingDate.getTime()
 
-          var date = startingDate, interval=15, arr=[];
-          for(var i=0;i<37;i++){
+          var date = startingDate, interval=30, arr=[];
+          for(var i=0;i<18;i++){
             var timeBlockDate = new Date(timestamp)
             var timeBlockDateEnd = (timestamp + interval*60*1000)
 
@@ -34,15 +34,9 @@ if (Meteor.isServer) {
         });
       },
 
-      welcome: function () {
+      // welcome: function () {
 
-      },
+      // },
     });
   });
 }
-
-
-
-
-
-
