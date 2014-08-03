@@ -11,11 +11,11 @@ if (Meteor.isClient) {
     Template.timeBlock.hidePastTimeBlocks();
 
     setTimeout(function(){
-      $('.timeBlocks').velocity("transition.slideUpIn");
-    }, 300);
+      Template.timeBlock.hidePastTimeBlocks();
+    },1000);
 
     setInterval(function(){
       Template.timeBlock.hidePastTimeBlocks();
-    },1000);
+    },5000);
   }
 }

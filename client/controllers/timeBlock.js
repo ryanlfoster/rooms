@@ -6,12 +6,11 @@ if (Meteor.isClient) {
   Template.timeBlock.showControls = function(e){
     $('.addOwner').hide();
     $(e.target).children('.addOwner').show();
-
     $(e.target).children('.addOwner').children().children('input').focus();
-    $(e.target).children('.addOwner').children().children('input').val('');
   }
 
   Template.timeBlock.hideControls = function(e){
+    document.activeElement.blur();
     $('.addOwner').hide();
   }
 
@@ -46,7 +45,7 @@ if (Meteor.isClient) {
 
     'submit form': function (e) {
       // Close form after submissions
-      $('.addOwner').hide();
+      Template.timeBlock.hideControls();
     },
 
     'keyup input': function(e) {
