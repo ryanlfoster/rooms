@@ -1,6 +1,6 @@
 <template name="timeBlock">
       <li class="timeBlock {{#if owner}}booked{{/if}}" data-end-time="{{endTime}}" >
-        <div class="timeBlock_time">{{timeBlock}}</div>
+        {{timeBlock}}
         <div class="timeBlock_owner">
           {{#if owner}}
             {{owner}}

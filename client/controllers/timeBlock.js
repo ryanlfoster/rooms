@@ -5,7 +5,9 @@ if (Meteor.isClient) {
 
   Template.timeBlock.showControls = function(e){
     $('.addOwner').hide();
+    $('li').removeClass('editing');
     $(e.target).children('.addOwner').show();
+    $(e.target).addClass('editing');
     $(e.target).children('.addOwner').children().children('input').focus();
   }
 
@@ -34,7 +36,7 @@ if (Meteor.isClient) {
   }
 
   Template.timeBlock.rendered = function(){
-    jsgradient.gradientList('#1AD6FD', '#1D62F0', '#timeBlockIndex');
+    jsgradient.gradientList('#F6AE8F', '#FF2A68', '#timeBlockIndex');
   }
 
   Template.timeBlock.events({
