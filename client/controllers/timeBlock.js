@@ -18,7 +18,6 @@ if (Meteor.isClient) {
 
   Template.timeBlock.hidePastTimeBlocks = function(e){
     var currentTime = Date.now();
-    console.log('Hiding old time blocks');
 
     $('li.timeBlock').each( function( index, el ) {
      if ($(el).data('end-time') < currentTime) {
