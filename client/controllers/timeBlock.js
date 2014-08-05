@@ -28,10 +28,17 @@ if (Meteor.isClient) {
     });
 
     if (currentTime > $('li.timeBlock').last().data('end-time') ) {
-      $('.goHome').show();
+      $('.goHome').transit({ opacity: 1, y: -40 }, 250);
     } else {
       $('.goHome').hide();
     }
+
+    $(".timeBlock").each(function (i) {
+      var $item = $(this);
+      setTimeout(function() {
+        $item.transit({opacity:1, y: -40}, 250);
+      }, 60*i);
+    });
   }
 
   Template.timeBlock.rendered = function(){

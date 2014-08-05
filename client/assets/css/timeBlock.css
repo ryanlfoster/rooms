@@ -8,6 +8,9 @@
     background-color: #ccc;
     display: block;
     cursor: pointer;
+    opacity: 0;
+    position: relative;
+    top: 40px;
 }
 
 .timeBlock_owner-input {
@@ -39,8 +42,10 @@
 }
 
 .timeBlock.booked {
-    opacity: 0.8;
     text-decoration: line-through;
+    background-color: #2B2B2B!important;
+    border-bottom: 1px solid #353535;
+    color: #B2B2B2;
 }
 
 .timeBlock.booked .timeBlock_time {
@@ -49,12 +54,12 @@
 
 @media only screen and (max-width:767px) {
     .timeBlock {
-        font-size:16px;
+        font-size:19px;
         padding: 22px 15px;
     }
 
     .timeBlock .timeBlock_owner-input {
-        font-size:18px;
+        font-size:22px;
         padding: 8px;
         border-radius:4px;
     }
