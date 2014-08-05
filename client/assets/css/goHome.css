@@ -18,7 +18,7 @@
     color: #fff;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:767px) {
     .goHome img {
         width: 48px;
         margin-bottom: 15px;

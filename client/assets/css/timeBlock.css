@@ -47,7 +47,7 @@
     text-decoration: line-through;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:767px) {
     .timeBlock {
         font-size:16px;
         padding: 22px 15px;
