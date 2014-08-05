@@ -4,16 +4,15 @@ if (Meteor.isClient) {
   }
 
   Template.timeBlock.showControls = function(e){
-    $('.addOwner').hide();
-    $('li').removeClass('editing');
-    $(e.target).children('.addOwner').show();
-    $(e.target).addClass('editing');
+    // $(e.target).children('.addOwner').transit({ height: 110, opacity: 1 }, 250, 'snap');
+    $('.addOwner').removeClass('editing');
+    $(e.target).children('.addOwner').addClass('editing');
     $(e.target).children('.addOwner').children().children('input').focus();
   }
 
   Template.timeBlock.hideControls = function(e){
     document.activeElement.blur();
-    $('.addOwner').hide();
+    $('.addOwner').removeClass('editing');
   }
 
   Template.timeBlock.hidePastTimeBlocks = function(e){

@@ -8,7 +8,7 @@
             +
           {{/if}}
         </div>
-        <div class="addOwner" style="display:none">
+        <div class="addOwner">
           {{#autoForm collection="Bookings" doc=editingDoc id="updateBooking" type="update"}}
             {{> afFieldInput name='owner' class="timeBlock_owner-input" placeholder='Your name'}}
           {{/autoForm}}
