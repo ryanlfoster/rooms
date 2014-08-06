@@ -5,16 +5,22 @@ if (Meteor.isClient) {
 
   Template.timeBlock.showControls = function(e){
     // $(e.target).children('.addOwner').transit({ height: 110, opacity: 1 }, 250, 'snap');
-    $('.addOwner').removeClass('editing');
-    $('.timeBlock').addClass('not-editing');
-    $(e.target).removeClass('not-editing');
-    $(e.target).children('.addOwner').children().children('input').focus();
-    setTimeout(function(){
-      $(e.target).children('.addOwner').addClass('editing');
-    },60);
+    if (Session.get('is-editing')) {
+      Template.timeBlock.hideControls();
+    }else{
+      $('.addOwner').removeClass('editing');
+      $('.timeBlock').addClass('not-editing');
+      $(e.target).removeClass('not-editing');
+      $(e.target).children('.addOwner').children().children('input').focus();
+      Session.set('is-editing', true);
+      setTimeout(function(){
+        $(e.target).children('.addOwner').addClass('editing');
+      },60);
+    }
   }
 
   Template.timeBlock.hideControls = function(e){
+    Session.set('is-editing', false);
     document.activeElement.blur();
     $('.addOwner').removeClass('editing');
     setTimeout(function(){
@@ -67,6 +73,10 @@ if (Meteor.isClient) {
         // Hits esc
         Template.timeBlock.hideControls();
       };
+    },
+
+    'click input': function(e) {
+      e.stopPropogation();
     }
   });
 }
