@@ -4,7 +4,6 @@ if (Meteor.isClient) {
   }
 
   Template.timeBlock.showControls = function(e){
-    // $(e.target).children('.addOwner').transit({ height: 110, opacity: 1 }, 250, 'snap');
     if (Session.get('is-editing')) {
       Template.timeBlock.hideControls();
     }else{
