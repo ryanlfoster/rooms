@@ -6,7 +6,7 @@ if (Meteor.isClient) {
       var $item = $(this);
       setTimeout(function() {
         $item.transit({opacity:1, y: -40}, 250);
-      }, 60*i);
+      }, 20*i);
     });
 
   }
@@ -18,7 +18,7 @@ if (Meteor.isClient) {
       var $item = $(this);
       setTimeout(function() {
         $item.transit({opacity:0, y: -80}, 250);
-      }, 60*i);
+      }, 20*i);
     });
 
     setTimeout(function(){
