@@ -13,6 +13,10 @@
     top: 40px;
     transition: background-color, opacity 0.3s ease;
     -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transform: translateZ(0);
 }
 
 .timeBlock_owner-input {
