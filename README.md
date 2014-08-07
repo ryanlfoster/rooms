@@ -1,4 +1,4 @@
-today
+rooms
 =====
 
 Zen meeting room booker
