@@ -4,6 +4,11 @@ Router.map(function() {
     layoutTemplate: 'default',
   });
 
+  this.route('reset', {
+    path: '/reset',
+    layoutTemplate: 'default',
+  });
+
   this.route('bookings', {
     path: '/:_id',
     layoutTemplate: 'default',
