@@ -27,6 +27,17 @@ $ meteor
     
 Open `http://localhost:3000` and in your dev tools console type `Meteor.call('newDay')` to populate the database with our config. 
 
+### Setup your own rooms
+Here at GoCardless, we have three meeting rooms as listed in <a href="https://github.com/gocardless/rooms/blob/master/server/today.js">/server/today.js</a>.
+
+```javascript
+// Setup your rooms here
+Rooms.insert({name: 'Boardroom'});
+Rooms.insert({name: 'Meeting room 1'});
+Rooms.insert({name: 'Meeting room 2'});
+```
+
+Simply add or edit these insert commands to fit your own workspace setup.
 
 ### Native iOS client
 We have the start of an iOS client in development, but it is not yet feature complete.
