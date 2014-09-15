@@ -26,3 +26,9 @@ $ meteor
 ```
     
 Open `http://localhost:3000` and in your dev tools console type `Meteor.call('newDay')` to populate the database with our config. 
+
+
+### Native iOS client
+We have the start of an iOS client in development, but it is not yet feature complete.
+
+<a href="https://github.com/gocardless/rooms-ios">Rooms iOS client</a>.
