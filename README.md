@@ -9,7 +9,7 @@ A zen meeting room booker written in Meteor.js.
 
 In a sea of complex and expensive apps to book & schedule meetings, we found ourselves looking for a simple, free alternative. We didn't find one, so we built Rooms. Rooms is a beautiful web app that works as perfectly on your phone as it does on your desktop. Changes to bookings are synced on every connected device instantly. 
 
-For more info about how and why we built Rooms, <a href="https://medium.com/@almonk/building-a-meeting-room-booking-app-in-7-hours-4f5534f9036a">check out our article in Medium</a>.
+For more info about how and why we built Rooms, <a href="https://medium.com/@almonk/building-a-meeting-room-booking-app-in-7-hours-4f5534f9036a">check out our article on Medium</a>.
 
 ### Installation
 
