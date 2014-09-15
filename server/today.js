@@ -6,11 +6,12 @@ if (Meteor.isServer) {
         Bookings.remove({});
         Rooms.remove({});
 
-        // Setup rooms
+        // Setup your rooms here
         Rooms.insert({name: 'Boardroom'});
         Rooms.insert({name: 'Meeting room 1'});
         Rooms.insert({name: 'Meeting room 2'});
-
+        
+        
         var rooms = Rooms.find({});
         var count = 0;
         rooms.forEach(function (room) {
